@@ -6,6 +6,10 @@ admin_field_search/__init__.py
 admin_field_search/admin.py
 admin_field_search/urls.py
 admin_field_search/views.py
+admin_field_search/docs/docu.txt
+admin_field_search/static/css/admin_field_search.css
+admin_field_search/templates/admin/admin_search_fields/admin_search_fields.html
+admin_field_search/templates/admin/admin_search_fields/change_list.html
 admin_field_search/templatetags/__init__.py
 admin_field_search/templatetags/admin_search_fields.py
 django_admin_field_search.egg-info/PKG-INFO

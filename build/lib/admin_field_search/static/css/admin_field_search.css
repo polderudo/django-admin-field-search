@@ -1,0 +1,32 @@
+#changelist-search input[type=text][data-class="bool"] {
+    width: 1em;
+}
+
+#changelist-search input[type=date]{
+    width: 10.5em;
+}
+
+#changelist-search .search_label{
+    margin-right: 0.5em;
+}
+
+#changelist-search .search_items{
+    float: left;
+}
+
+#changelist-search .search_item{
+    display: inline-block;
+}
+
+#changelist-search .desc{
+    font-size: 0.7em;
+    color: #808080;
+    margin-right: 1.5em;
+}
+
+.clear{
+    clear: both;
+}
+.search-div-filter{
+    margin-right: 160px !important;
+}
