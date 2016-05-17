@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: django-admin-field-search
-Version: 0.1
+Version: 0.2
 Summary: Aufrufen von Suchfelder in der Admin
 Home-page: https://www.example.com/
 Author: Udo Polder
