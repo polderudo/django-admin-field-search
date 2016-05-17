@@ -5,7 +5,6 @@ from django.db.models import Q, Count
 from exceptions import Exception
 from django.conf import settings
 from datetime import datetime
-from dateutil import parser
 from django.contrib.admin.views.main import ChangeList
 from django.contrib.admin.views.main import PAGE_VAR, ALL_VAR
 from django.http import QueryDict
@@ -143,13 +142,14 @@ class AdminFieldsSearch(admin.ModelAdmin):
             elif type == 'C':
                 return int(obj), op if op else '%s__exact'%COUNT_VAR
             elif type == 'D':
-                if '.' in obj:
-                    try:
-                        dt = datetime.strptime(obj, '%d.%m.%Y')
-                    except:
-                        dt = None
-                else:
-                    dt = parser.parse(obj)
+				try:
+					if ':' in obj:
+						dt = datetime.strptime(obj, '%d.%m.%Y')
+					else:					
+						dt = datetime.strptime(obj, '%d.%m.%Y %H:%M:%S')
+				except:
+					dt = None
+					
 
                 return dt, op if op else None
 
