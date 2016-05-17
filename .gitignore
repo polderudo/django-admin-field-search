@@ -1,0 +1,4 @@
+# Created by .ignore support plugin (hsz.mobi)
+django_admin_field_search.egg-info/
+dist/
+build/
