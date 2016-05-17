@@ -148,10 +148,9 @@ class AdminFieldsSearch(admin.ModelAdmin):
 					else:					
 						dt = datetime.strptime(obj, '%d.%m.%Y %H:%M:%S')
 				except:
-					dt = None
+				    dt = None
 					
-
-                return dt, op if op else None
+				return dt, op if op else None
 
         except:
             return None, op
