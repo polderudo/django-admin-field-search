@@ -1,0 +1,5 @@
+setuo builden
+python setup.py sdist
+
+
+pip install -e git+git@git.polder.pro:django/AdminFieldSearch#egg=AdminFieldSearch
