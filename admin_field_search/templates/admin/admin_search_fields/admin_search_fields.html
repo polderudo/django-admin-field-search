@@ -3,8 +3,9 @@
 
 <div {% if cl.has_filters %} class="search-div-filter" {% endif %}>
 <form id="changelist-search" action="" method="get">
-
-    <div class="search_items">
+	
+	<div id="search_box_link"><a href="#">Suche</a></div>
+    <div id="search_box" class="search_items">
         <input type="hidden" name="{{ search_var }}" value="{{ cl.query }}">
         <input type="hidden" name="{{ page_var }}" value="{{ cl.page_num }}" id="page" />
 
@@ -60,7 +61,7 @@
     </div>
     <div class="clear"></div>
     <script type="text/javascript">
-    (function($) {
+    (function($) {		
         $(document).ready(function($) {
             $('.paginator > a').click(function(el){
                 var href = $(this).attr("href");
@@ -75,6 +76,12 @@
                     return false;
                 }
             });
+			
+			$('#search_box_link').click(function(){				
+				$('#search_box').toggle();
+			});
+			$('#search_box').hide();
+			
         });
     })(django.jQuery);
     </script>
