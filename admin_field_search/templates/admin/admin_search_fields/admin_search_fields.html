@@ -80,7 +80,10 @@
 			$('#search_box_link').click(function(){				
 				$('#search_box').toggle();
 			});
-			$('#search_box').hide();
+
+            {% if hide_search %}
+			    $('#search_box').hide();
+            {% endif %}
 			
         });
     })(django.jQuery);
