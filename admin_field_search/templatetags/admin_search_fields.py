@@ -8,7 +8,7 @@ register = Library()
 
 @register.inclusion_tag('admin/admin_search_fields/admin_search_fields.html')
 def admin_search(cl):
-    hide_search = False
+    hide_search = True
     if settings.ADMIN_FIELD_SEARCH_HIDE_INITIAL is not None:
         hide_search = settings.ADMIN_FIELD_SEARCH_HIDE_INITIAL
 
