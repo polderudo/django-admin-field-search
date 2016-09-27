@@ -11,7 +11,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-admin-field-search',
-    version='0.5',
+    version='0.6',
     packages=find_packages(),
     include_package_data=True,
     license='BSD License',  # example license
@@ -20,5 +20,5 @@ setup(
     url='https://www.example.com/',
     author='Udo Polder',
     author_email='udo@polder.pro',
-	zip_safe=False,
+    zip_safe=False,
 )

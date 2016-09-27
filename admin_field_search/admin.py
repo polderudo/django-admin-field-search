@@ -126,7 +126,7 @@ class AdminFieldsSearch(admin.ModelAdmin):
             if operator and not type=='C':
                 op = "%s__%s"%(field,operator)
             elif operator and type=='C':
-                op = "%s__%s"%(COUNT_VAR,operator)
+                op = "%s__%s"%(COUNT_VAR, operator)
 
             if type == 'I':
                 return  int(obj), op if op else '%s__exact'%field
@@ -142,15 +142,14 @@ class AdminFieldsSearch(admin.ModelAdmin):
             elif type == 'C':
                 return int(obj), op if op else '%s__exact'%COUNT_VAR
             elif type == 'D':
-				try:
-					if ':' in obj:
-						dt = datetime.strptime(obj, '%d.%m.%Y')
-					else:					
-						dt = datetime.strptime(obj, '%d.%m.%Y %H:%M:%S')
-				except:
-				    dt = None
-					
-				return dt, op if op else None
+                try:
+                    if ':' in obj:
+                        dt = datetime.strptime(str(obj), '%d.%m.%Y %H:%M:%S')
+                    else:
+                        dt = datetime.strptime(str(obj), '%d.%m.%Y')
+                except Exception as ex:
+                    dt = None
+                return dt, op if op else None
 
         except:
             return None, op
